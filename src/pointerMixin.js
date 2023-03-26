@@ -87,6 +87,9 @@ export default {
         ) this.pointerForward()
       }
       this.pointerDirty = true
+      if (this.filteredOptions[this.pointer].splitter) {
+        this.pointerForward()
+      }
     },
     pointerBackward () {
       if (this.pointer > 0) {
@@ -110,6 +113,9 @@ export default {
         ) this.pointerForward()
       }
       this.pointerDirty = true
+      if (this.filteredOptions[this.pointer].splitter) {
+        this.pointerBackward()
+      }
     },
     pointerReset () {
       /* istanbul ignore else */

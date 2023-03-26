@@ -813,6 +813,9 @@ var VueMultiselect = (function (exports, vue) {
           ) this.pointerForward();
         }
         this.pointerDirty = true;
+        if (this.filteredOptions[this.pointer].splitter) {
+          this.pointerForward();
+        }
       },
       pointerBackward () {
         if (this.pointer > 0) {
@@ -836,6 +839,9 @@ var VueMultiselect = (function (exports, vue) {
           ) this.pointerForward();
         }
         this.pointerDirty = true;
+        if (this.filteredOptions[this.pointer].splitter) {
+          this.pointerBackward();
+        }
       },
       pointerReset () {
         /* istanbul ignore else */
