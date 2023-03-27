@@ -1109,10 +1109,9 @@ var VueMultiselect = (function (exports, vue) {
   const _hoisted_3 = { class: "multiselect__spinner" };
   const _hoisted_4 = { key: 0 };
   const _hoisted_5 = { class: "multiselect__option" };
-  const _hoisted_6 = { class: "multiselect__option" };
-  const _hoisted_7 = /*#__PURE__*/vue.createTextVNode("No elements found. Consider changing the search query.");
-  const _hoisted_8 = { class: "multiselect__option" };
-  const _hoisted_9 = /*#__PURE__*/vue.createTextVNode("List is empty.");
+  const _hoisted_6 = /*#__PURE__*/vue.createVNode("span", { class: "multiselect__option foobar" }, " No elements found. Consider changing the search query. ", -1 /* HOISTED */);
+  const _hoisted_7 = { class: "multiselect__option" };
+  const _hoisted_8 = /*#__PURE__*/vue.createTextVNode("List is empty.");
 
   function render(_ctx, _cache, $props, $setup, $data, $options) {
     return (vue.openBlock(), vue.createBlock("div", {
@@ -1314,18 +1313,16 @@ var VueMultiselect = (function (exports, vue) {
                   }), 128 /* KEYED_FRAGMENT */))
                 : vue.createCommentVNode("v-if", true),
               vue.withDirectives(vue.createVNode("li", null, [
-                vue.createVNode("span", _hoisted_6, [
-                  vue.renderSlot(_ctx.$slots, "noResult", { search: _ctx.search }, () => [
-                    _hoisted_7
-                  ])
+                vue.renderSlot(_ctx.$slots, "noResult", { search: _ctx.search }, () => [
+                  _hoisted_6
                 ])
               ], 512 /* NEED_PATCH */), [
                 [vue.vShow, $props.showNoResults && (_ctx.filteredOptions.length === 0 && _ctx.search && !$props.loading)]
               ]),
               vue.withDirectives(vue.createVNode("li", null, [
-                vue.createVNode("span", _hoisted_8, [
+                vue.createVNode("span", _hoisted_7, [
                   vue.renderSlot(_ctx.$slots, "noOptions", {}, () => [
-                    _hoisted_9
+                    _hoisted_8
                   ])
                 ])
               ], 512 /* NEED_PATCH */), [

@@ -1108,10 +1108,9 @@ const _hoisted_2 = { class: "multiselect__tags-wrap" };
 const _hoisted_3 = { class: "multiselect__spinner" };
 const _hoisted_4 = { key: 0 };
 const _hoisted_5 = { class: "multiselect__option" };
-const _hoisted_6 = { class: "multiselect__option" };
-const _hoisted_7 = /*#__PURE__*/createTextVNode("No elements found. Consider changing the search query.");
-const _hoisted_8 = { class: "multiselect__option" };
-const _hoisted_9 = /*#__PURE__*/createTextVNode("List is empty.");
+const _hoisted_6 = /*#__PURE__*/createVNode("span", { class: "multiselect__option foobar" }, " No elements found. Consider changing the search query. ", -1 /* HOISTED */);
+const _hoisted_7 = { class: "multiselect__option" };
+const _hoisted_8 = /*#__PURE__*/createTextVNode("List is empty.");
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock("div", {
@@ -1313,18 +1312,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
                 }), 128 /* KEYED_FRAGMENT */))
               : createCommentVNode("v-if", true),
             withDirectives(createVNode("li", null, [
-              createVNode("span", _hoisted_6, [
-                renderSlot(_ctx.$slots, "noResult", { search: _ctx.search }, () => [
-                  _hoisted_7
-                ])
+              renderSlot(_ctx.$slots, "noResult", { search: _ctx.search }, () => [
+                _hoisted_6
               ])
             ], 512 /* NEED_PATCH */), [
               [vShow, $props.showNoResults && (_ctx.filteredOptions.length === 0 && _ctx.search && !$props.loading)]
             ]),
             withDirectives(createVNode("li", null, [
-              createVNode("span", _hoisted_8, [
+              createVNode("span", _hoisted_7, [
                 renderSlot(_ctx.$slots, "noOptions", {}, () => [
-                  _hoisted_9
+                  _hoisted_8
                 ])
               ])
             ], 512 /* NEED_PATCH */), [
