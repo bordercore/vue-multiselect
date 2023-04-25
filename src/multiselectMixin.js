@@ -357,7 +357,7 @@ export default {
         : options
 
       /* istanbul ignore else */
-      if (this.taggable && normalizedSearch.length && !this.isExistingOption(normalizedSearch)) {
+      if (this.taggable && normalizedSearch.length) {
         if (this.tagPosition === 'bottom') {
           options.push({isTag: true, label: search})
         } else {

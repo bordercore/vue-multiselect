@@ -359,7 +359,7 @@ var multiselectMixin = {
         : options;
 
       /* istanbul ignore else */
-      if (this.taggable && normalizedSearch.length && !this.isExistingOption(normalizedSearch)) {
+      if (this.taggable && normalizedSearch.length) {
         if (this.tagPosition === 'bottom') {
           options.push({isTag: true, label: search});
         } else {
@@ -1108,7 +1108,7 @@ const _hoisted_2 = { class: "multiselect__tags-wrap" };
 const _hoisted_3 = { class: "multiselect__spinner" };
 const _hoisted_4 = { key: 0 };
 const _hoisted_5 = { class: "multiselect__option" };
-const _hoisted_6 = /*#__PURE__*/createVNode("span", { class: "multiselect__option foobar" }, " No elements found. Consider changing the search query. ", -1 /* HOISTED */);
+const _hoisted_6 = /*#__PURE__*/createVNode("span", { class: "multiselect__option" }, " No elements found. Consider changing the search query. ", -1 /* HOISTED */);
 const _hoisted_7 = { class: "multiselect__option" };
 const _hoisted_8 = /*#__PURE__*/createTextVNode("List is empty.");
 
